@@ -3,6 +3,14 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+ext {
+    PUBLISH_GROUP_ID = 'io.github.karthyks'
+    PUBLISH_VERSION = '0.1.0'
+    PUBLISH_ARTIFACT_ID = 'composed'
+}
+
+apply from: 'publish-remote.gradle'
+
 android {
     namespace 'com.karthyks.composed'
     compileSdk 33

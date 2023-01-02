@@ -1,16 +1,14 @@
 package com.karthyks.composed.usecase
 
-import com.karthyks.composed.LocalOverlayProvider
-import com.karthyks.composed.Overlay
-import com.karthyks.composed.ViewHolder
-import com.karthyks.composed.viewHolder
 import com.karthyks.composed.views.RenderFullScreenDialogContent
+import io.github.karthyks.composed.Overlay
+import io.github.karthyks.composed.ViewHolder
+import io.github.karthyks.composed.viewHolder
 
 class FullScreenDialog : Overlay {
-    override val viewHolder: ViewHolder by viewHolder {
-        val provider = LocalOverlayProvider.current
+    override val viewHolder: ViewHolder by viewHolder { disposable ->
         RenderFullScreenDialogContent {
-            provider.remove(this)
+            disposable.dispose()
         }
     }
 }
