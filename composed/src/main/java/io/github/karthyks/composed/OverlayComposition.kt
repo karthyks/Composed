@@ -1,4 +1,4 @@
-package com.karthyks.composed
+package io.github.karthyks.composed
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider

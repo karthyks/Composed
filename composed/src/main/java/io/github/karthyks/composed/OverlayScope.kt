@@ -1,4 +1,4 @@
-package com.karthyks.composed
+package io.github.karthyks.composed
 
 import androidx.compose.foundation.layout.LayoutScopeMarker
 import androidx.compose.runtime.Composable
