@@ -3,14 +3,33 @@ package io.github.karthyks.composed
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.SnapshotStateList
 
+/**
+ * Overlay - extend this interface to create custom overlays
+ * @sample -
+ * <code><pre>
+ *      class CustomOverlay: Overlay {
+ *          override val viewHolder: ViewHolder by viewHolder { disposable ->
+ *              Box {
+ *                  Button(onClick = { disposable.dispose() })
+ *              }
+ *          }
+ *      }
+ * </pre></code>
+ * @see Overlay.viewHolder
+ */
 interface Overlay {
     val viewHolder: ViewHolder
 }
 
+/**
+ * Provider which handles the lifecycle of overlays in a Stack.
+ * Use composition to create an OverlayProvider.
+ * @see io.github.karthyks.composed.ProvideOverlay
+ */
 abstract class OverlayProvider : InternalOverlayProvider() {
     abstract fun showOverlay(overlay: Overlay, attachToParent: Boolean = false)
-    abstract fun remove(viewHolder: ViewHolder)
-    abstract fun remove(overlay: Overlay)
+    internal abstract fun remove(viewHolder: ViewHolder)
+    internal abstract fun remove(overlay: Overlay)
 }
 
 abstract class InternalOverlayProvider {
