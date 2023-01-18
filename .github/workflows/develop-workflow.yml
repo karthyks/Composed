@@ -1,9 +1,9 @@
-name: Composed Release
+name: Composed
 
 on:
   push:
     branches:
-      - 'release*'
+      - 'develop'
 
 jobs:
 
