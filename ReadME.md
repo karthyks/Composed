@@ -1,4 +1,4 @@
-![release](https://github.com/karthyks/Composed/blob/develop/.github/workflows/release.yml/badge.svg)
+![develop](https://github.com/karthyks/Composed/blob/develop/.github/workflows/develop-workflow.yml/badge.svg)
 
 # Composed
 Utility library for Jetpack compose projects.
