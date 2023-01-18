@@ -1,4 +1,4 @@
-Latest version: `0.2.0`
+![release](https://github.com/karthyks/Composed/blob/develop/.github/workflows/release.yml/badge.svg)
 
 # Composed
 Utility library for Jetpack compose projects.
