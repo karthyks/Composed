@@ -23,6 +23,7 @@ class TestActivityTest {
         composeTestRule.onNodeWithTag(TestTag.showDialog).performClick()
         composeTestRule.onNodeWithTag(TestTag.fullScreenDialog).assertExists()
         composeTestRule.onNodeWithTag(TestTag.toastMessage).assertExists()
+        composeTestRule.mainClock.advanceTimeBy(2000)
         composeTestRule.waitUntil {
             composeTestRule.onAllNodesWithTag(TestTag.toastMessage).fetchSemanticsNodes().isEmpty()
         }
