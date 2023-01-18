@@ -13,6 +13,14 @@ implementation "io.github.karthyks:composed:{latest_version}"
 
 ## Usage
 ```
+ProvideOverlay {
+    Column {
+       val overlayProvider = LocalOverlayProvider.current
+       LaunchedEffect(key1 = Unit) {
+          overlayProvider.showOverlay(FullScreenDialog())
+       }
+    }
+}
 class FullScreenDialog : Overlay {
     override val viewHolder: ViewHolder by viewHolder { disposable ->
         RenderFullScreenDialogContent {
