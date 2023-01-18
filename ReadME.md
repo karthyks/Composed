@@ -23,3 +23,15 @@ class FullScreenDialog : Overlay {
 
 ```
 https://user-images.githubusercontent.com/4476587/213263411-1450e338-d704-4dea-ae89-07c1d6e65825.mp4
+
+## Changelog
+The [changelog](https://github.com/karthyks/Composed/releases) is regularly updated to reflect what's changed in each new release.
+
+## License
+This project is licensed under the terms of the [MIT license](https://github.com/karthyks/Composed/blob/develop/LICENSE).
+
+## Contributing
+Read the [contributing guide](https://github.com/karthyks/Composed/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
+
+Contributing to Composed is about more than just issues! New features or extensions are always welcome. 
+
