@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "Composed"
 include ':app'
 include ':composed'
+include ':test-app'
+include ':samples'
