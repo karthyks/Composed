@@ -31,7 +31,7 @@ The [changelog](https://github.com/karthyks/Composed/releases) is regularly upda
 This project is licensed under the terms of the [MIT license](https://github.com/karthyks/Composed/blob/develop/LICENSE).
 
 ## Contributing
-Read the [contributing guide](https://github.com/karthyks/Composed/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
+Read the [contributing guide](https://github.com/karthyks/Composed/blob/develop/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
 
 Contributing to Composed is about more than just issues! New features or extensions are always welcome. 
 
