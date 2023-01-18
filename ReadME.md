@@ -20,6 +20,6 @@ class FullScreenDialog : Overlay {
         }
     }
 }
-```
-https://user-images.githubusercontent.com/4476587/212680965-88f80a2c-170e-488b-96ec-19cc24177cda.mp4
 
+```
+https://user-images.githubusercontent.com/4476587/213263411-1450e338-d704-4dea-ae89-07c1d6e65825.mp4
