@@ -6,6 +6,21 @@ Utility library for Jetpack compose projects.
 Render a composable dynamically on top of a composable. Overlay is a stack based renderer, multiple composables can be rendered on top of each other.
 One of the main use-cases is it is really useful in a modularised project where you don't have to expose the UI code but just the overlay contract and also to render condition based composable (show a dialog on click/ show a message on top of a screen).
 
+## Why Composed?
+
+### Without composed overlay
+
+All the conditional composable components are tied to the composable function.
+
+<img width="592" alt="image" src="https://user-images.githubusercontent.com/4476587/213991130-e7c89c88-56f7-4efb-bd7c-09fe0c967a0b.png">
+
+### With composed
+
+Conditional composable components such as ToastMessage, DialogScreen can be decoupled from Composables and triggered via a contract from the viewModel.
+
+<img width="655" alt="image" src="https://user-images.githubusercontent.com/4476587/213991272-9668d8e5-d362-417c-a11f-899f6ba76cfa.png">
+
+
 ## Installation
 ```
 implementation "io.github.karthyks:composed:{latest_version}"
