@@ -4,11 +4,12 @@ plugins {
 }
 
 android {
-    namespace 'com.karthyks.composed'
+    namespace 'com.karthyks.composed.test'
     compileSdk 33
 
     defaultConfig {
         applicationId "com.karthyks.composed"
+        testApplicationId "com.karthyks.composed.test"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -18,6 +19,9 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+    }
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
     }
 
     buildTypes {
@@ -61,10 +65,16 @@ dependencies {
     implementation 'androidx.compose.material:material-icons-extended'
     implementation 'androidx.compose.material3:material3-window-size-class'
 
-    implementation project(":samples")
+    implementation(project(":samples"))
 
     implementation "androidx.compose.ui:ui-tooling-preview"
     implementation 'androidx.compose.material3:material3'
     debugImplementation "androidx.compose.ui:ui-tooling"
     debugImplementation "androidx.compose.ui:ui-test-manifest"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation(project(":composed"))
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4"
 }
