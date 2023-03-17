@@ -21,18 +21,21 @@ import androidx.compose.ui.unit.dp
 import com.karthyks.composed.samples.overlays.FullScreenOverlay
 import com.karthyks.composed.samples.test.TestTag
 import io.github.karthyks.composed.LocalOverlayProvider
+import io.github.karthyks.composed.ProvideOverlay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RenderSampleScreen() {
-    Scaffold(
-        topBar = {
-            RenderTopBar()
-        }
-    ) { padding ->
-        val overlayProvider = LocalOverlayProvider.current
-        RenderContent(modifier = Modifier.padding(padding)) {
-            overlayProvider.showOverlay(FullScreenOverlay())
+    ProvideOverlay {
+        Scaffold(
+            topBar = {
+                RenderTopBar()
+            }
+        ) { padding ->
+            val overlayProvider = LocalOverlayProvider.current
+            RenderContent(modifier = Modifier.padding(padding)) {
+                overlayProvider.showOverlay(FullScreenOverlay())
+            }
         }
     }
 }
